@@ -1,0 +1,33 @@
+Objet : Urgent : Problème sur le site
+
+Bonjour,
+
+A l'occasion de la préparation de mon reporting mensuel,
+ je viens de me rendre compte, à l'instant 12h00, que le nombre de visiteurs sur le site en temps réel est à Zéro depuis 3h20 ce matin,
+   comme l'indique le graphique en pièce jointe (Photo-4.png).
+
+Je préférais vous mettre au courant au cas où vous ne le seriez pas déjà.
+
+Le problème n'a pas encore été qualifié mais il est peut être lié à la mise en production d'une nouvelle version du site,
+ qui a commencé hier à 16h00 et s'est finie non sans difficulté ce matin à 8H00.
+
+J'ai donné l'alerte au service de Production ainsi qu'à l'administrateur système.
+Selon eux, il n'y a pas de problème du côté de l'installation du site. 
+Une batterie de tests est systématiquement lançée après chaque mise en production pour s'assurer que le site fonctionne et tient la charge.
+La connexion au site est testée ainsi que les actions courantes comme la navigation dans les rubriques principales et la commande d'articles.
+
+J'ai contacté la R&D pour leur signifier le problème de comptage des visiteurs.
+C'est une variable incrémentée en base de données à chaque connexion d'un visiteur. 
+De ce côté là rien n'a changé, c'est toujours la même donnée dans la même table, 
+ et c'est d'ailleurs cette donnée que je lis pour produire le graphique que je vous ai présenté plus haut.
+
+Il semblerait par contre qu'il y ai eu un problème de versionning au moment de packager l'ensemble du site avant installation.
+Comme toutes les fonctionnalités ne sont pas testées à la mise en prod, çà serait trop long, 
+ il est possible qu'une ancienne version du comptage est été réintoduite par erreur.
+Le Lead Dev doit me le confirmer.
+
+Je vous tiens au courant.
+
+Loïc
+
+
